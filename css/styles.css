@@ -78,6 +78,9 @@ h1, h2, h3, h4, h5, h6, p, ul {
     color: #444444;
     text-decoration: none;
 }
+.header .header-container ul li a:hover {
+    color: #56bc94;
+}
 /* Main */
 main {
     padding-top: 70px;
@@ -158,4 +161,44 @@ main {
     text-align: center;
     text-decoration: none;
     margin: 28px 0 ;
+}
+
+/* Contact */
+.contact {
+    background-color: #56bc94;
+    padding: 56px 0;
+}
+.contact .title {
+   color: #ffffff;
+   margin: 16px 0;
+   font-size: 30px;
+   font-weight: normal;
+}
+.contact .description {
+    width: 50%;
+    color: #ffffff;
+    margin: 16px auto;
+}
+.contact ul.details {
+    list-style: none;
+    margin: 32px 0;
+}
+.contact ul.details li {
+    color: #317b5e;
+    margin: 8px 0;
+}
+.contact .contact-form {
+    width: 50%;
+    margin: auto;
+}
+.contact .contact-form .form-input {
+    border-color: #fff;
+    height: auto;
+    padding: 8px 16px;
+}
+.contact .contact-form .form-input input {
+    border-color: #fff;
+    height: auto;
+    padding: 8px 16px;
+    box-shadow: none;
 }
