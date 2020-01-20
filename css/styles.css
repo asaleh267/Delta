@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p, ul {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+/* header */
+.header {
+    background: #ffffff;
+    padding: 16px;
+}
+.header.navbar-fixed {
+    position: fixed;
+    width: 100%;
+}
+.header .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media only screen and (max-width: 767px) {
+    .header .header-container {
+        display: block;
+    }
+}
+.header .header-container .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .header-container .title .burger-menu {
+    display: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    border: 1px solid #e8e8e8;
+}
+@media only screen and (max-width: 767px) {
+    .header .header-container .title .burger-menu  {
+        display: block;
+    }
+}
+.header .header-container .title .burger-menu img {
+    height: 24px;
+    width: 24px;
+}
+.header .header-container ul li {
+    display: inline-block;
+    list-style: none;
+}
+@media only screen and (max-width: 767px) {
+    .header .header-container ul li {
+        display: block;
+    }
+}
+.header .header-container ul li:not(:last-child) {
+    margin-right: 16px;
+}
+.header .header-container ul li a {
+    text-transform: uppercase;
+    color: #444444;
+    text-decoration: none;
+}
