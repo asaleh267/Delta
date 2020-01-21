@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
     padding: 16px;
     box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
     z-index: 9999;
+    height: 70px;
 }
 .header.navbar-fixed {
     position: fixed;
@@ -96,6 +97,11 @@ main {
 /* Pricing  */
 .pricing {
     background-color: #f5f5f5;
+    padding: 56px;
+}
+.pricing h1 { 
+    font-size: 32px;
+    margin-bottom: 56px;
 }
 .pricing .items-wrapper {
     display: flex;
@@ -124,6 +130,7 @@ main {
 
 .pricing .items-wrapper .item .item-inner {
     background-color: #ffffff;
+    position: relative;
 }
 .pricing .items-wrapper .item .item-inner .heading {
     background-color: #c4e7d9;
@@ -178,6 +185,48 @@ main {
     font-size: 14px;
     margin: 28px 0;
 }
+.pricing .items-wrapper .item .item-inner .popular {  
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
+}
+.pricing .items-wrapper .item .item-inner .popular .text {  
+    position: relative;
+    left: -8px;
+    top: 18px;
+    width: 158px;
+    padding: 10px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #3fa07a;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.pricing .items-wrapper .item .item-inner .popular .text:before,
+.pricing .items-wrapper .item .item-inner .popular .text:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    border-top: 5px solid #225742;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.pricing .items-wrapper .item .item-inner .popular .text:before {
+    left: 6px;
+}
+.pricing .items-wrapper .item .item-inner .popular .text:after {
+    right: 2px;
+}
+
 
 /* Contact */
 .contact {
