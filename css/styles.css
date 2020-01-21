@@ -19,6 +19,14 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .patterned-background {
     background-image: url('../assets/images/pattern-1.png');
 }
+.btn {
+    border-radius: 4px;
+    color: #ffffff;
+    display: inline-block;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+}
 
 /* header */
 .header {
@@ -95,11 +103,25 @@ main {
     justify-content: center;
     padding: 0 100px;
 }
+@media only screen and (max-width: 767px) {
+    .pricing .items-wrapper {
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+}
+
 .pricing .items-wrapper .item {
     padding: 16px;
     width: calc(100% / 3);
     border-radius: 4px;
 }
+@media only screen and (max-width: 767px) {
+    .pricing .items-wrapper .item {
+        width: 100%;
+    }
+}
+
 .pricing .items-wrapper .item .item-inner {
     background-color: #ffffff;
 }
@@ -152,15 +174,9 @@ main {
 .pricing .items-wrapper .item .item-inner .content .submit-button {
     background: #56bc94;
     border: 1px solid #56bc94;
-    border-radius: 4px;
-    color: #fff;
-    display: inline-block;
     width: 100%;
-    padding: 8px 16px;
     font-size: 14px;
-    text-align: center;
-    text-decoration: none;
-    margin: 28px 0 ;
+    margin: 28px 0;
 }
 
 /* Contact */
@@ -177,8 +193,15 @@ main {
 .contact .description {
     width: 50%;
     color: #ffffff;
-    margin: 16px auto;
+    margin: auto;
+    padding: 16px;
 }
+@media only screen and (max-width: 767px) {
+    .contact .description {
+        width: 100%;
+    }
+}
+
 .contact ul.details {
     list-style: none;
     margin: 32px 0;
@@ -191,14 +214,47 @@ main {
     width: 50%;
     margin: auto;
 }
+@media only screen and (max-width: 767px) {
+    .contact .contact-form {
+        width: 100%;
+    }
+}
 .contact .contact-form .form-input {
-    border-color: #fff;
+    border-color: #ffffff;
     height: auto;
     padding: 8px 16px;
 }
-.contact .contact-form .form-input input {
-    border-color: #fff;
+.contact .contact-form .form-input input, .contact .contact-form .form-input textarea {
+    border-color: #ffffff;
     height: auto;
     padding: 8px 16px;
     box-shadow: none;
+    display: block;
+    width: 100%;
+    color: #495057;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    text-transform: uppercase;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    text-transform: uppercase;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    text-transform: uppercase;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    text-transform: uppercase;
+}
+::placeholder { /* Recent browsers */
+    text-transform: uppercase;
+}
+.contact .contact-form .submit-button {
+    border: 1px solid #56bc94;
+    color: #fff;
+    background-color: #317b5e;
+    margin-top: 15px;
+    font-size: 24px;
 }
