@@ -27,6 +27,9 @@ h1, h2, h3, h4, h5, h6, p, ul {
     text-align: center;
     text-decoration: none;
 }
+.pb-4 {
+    padding-bottom: 32px !important;
+}
 
 /* header */
 .header {
@@ -132,7 +135,7 @@ main {
 }
 .pricing .items-wrapper {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     padding: 0 100px;
 }
