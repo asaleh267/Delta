@@ -36,6 +36,11 @@ h1, h2, h3, h4, h5, h6, p, ul {
     z-index: 9999;
     height: 70px;
 }
+@media only screen and (max-width: 767px) {
+    .header {
+        height: auto;
+    }
+}
 .header.navbar-fixed {
     position: fixed;
     width: 100%;
@@ -60,15 +65,24 @@ h1, h2, h3, h4, h5, h6, p, ul {
     border-radius: 8px;
     padding: 8px 16px;
     border: 1px solid #e8e8e8;
+    background-color: #225742;
 }
 @media only screen and (max-width: 767px) {
-    .header .header-container .title .burger-menu  {
+    .header .header-container .title .burger-menu {
         display: block;
     }
+}
+.header .header-container .title .burger-menu i {
+    color: #ffffff;
 }
 .header .header-container .title .burger-menu img {
     height: 24px;
     width: 24px;
+}
+@media only screen and (max-width: 767px) {
+    .header .header-container nav {
+        display: none;
+    }
 }
 .header .header-container ul li {
     display: inline-block;
@@ -99,6 +113,12 @@ main {
     background-color: #f5f5f5;
     padding: 56px;
 }
+@media only screen and (max-width: 991px) {
+    .pricing {
+        padding: 0px;
+    }
+}
+
 .pricing h1 { 
     font-size: 32px;
     margin-bottom: 56px;
@@ -109,7 +129,7 @@ main {
     justify-content: center;
     padding: 0 100px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
     .pricing .items-wrapper {
         flex-direction: column;
         padding: 0;
@@ -174,9 +194,22 @@ main {
 .pricing .items-wrapper .item .item-inner .content .feature-list {
     list-style: none;
 }
-.pricing .items-wrapper .item .item-inner .content li {
+.pricing .items-wrapper .item .item-inner .content .feature-list li {
     border-bottom: 1px solid #efefef;
     padding: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pricing .items-wrapper .item .item-inner .content .feature-list li.disabled {
+    color: #999999;
+}
+.pricing .items-wrapper .item .item-inner .content .feature-list li i {
+    color: #56bc94;
+    margin-right: 8px;
+}
+.pricing .items-wrapper .item .item-inner .content .feature-list li.disabled i {
+    color: #999999;
 }
 .pricing .items-wrapper .item .item-inner .content .submit-button {
     background: #56bc94;
@@ -258,6 +291,9 @@ main {
 .contact ul.details li {
     color: #317b5e;
     margin: 8px 0;
+}
+.contact ul.details li i {
+    margin-right: 8px;
 }
 .contact .contact-form {
     width: 50%;
