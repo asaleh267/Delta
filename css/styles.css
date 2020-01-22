@@ -36,11 +36,6 @@ h1, h2, h3, h4, h5, h6, p, ul {
     z-index: 9999;
     height: 70px;
 }
-@media only screen and (max-width: 767px) {
-    .header {
-        height: auto;
-    }
-}
 .header.navbar-fixed {
     position: fixed;
     width: 100%;
@@ -55,33 +50,39 @@ h1, h2, h3, h4, h5, h6, p, ul {
         display: block;
     }
 }
-.header .header-container .title {
+.header .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.header .header-container .title .burger-menu {
+.header .header-container .burger-menu {
     display: none;
     border-radius: 8px;
     padding: 8px 16px;
     border: 1px solid #e8e8e8;
-    background-color: #225742;
 }
 @media only screen and (max-width: 767px) {
-    .header .header-container .title .burger-menu {
+    .header .header-container .burger-menu {
         display: block;
     }
 }
-.header .header-container .title .burger-menu i {
-    color: #ffffff;
+.header .header-container .burger-menu i {
+    color: #999999;
 }
-.header .header-container .title .burger-menu img {
-    height: 24px;
-    width: 24px;
-}
+
 @media only screen and (max-width: 767px) {
+    input[type="checkbox"]:checked ~ nav {
+        display: block;
+    }
+
     .header .header-container nav {
         display: none;
+        position: absolute;
+        top: 70px;
+        background: white;
+        width: 100%;
+        left: 0;
+        padding: 16px;
     }
 }
 .header .header-container ul li {
@@ -91,6 +92,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 @media only screen and (max-width: 767px) {
     .header .header-container ul li {
         display: block;
+        margin-bottom: 16px;
     }
 }
 .header .header-container ul li:not(:last-child) {
@@ -122,6 +124,11 @@ main {
 .pricing h1 { 
     font-size: 32px;
     margin-bottom: 56px;
+}
+@media only screen and (max-width: 767px) {
+    .pricing h1 { 
+        padding-top: 32px;
+    }
 }
 .pricing .items-wrapper {
     display: flex;
@@ -283,7 +290,6 @@ main {
         width: 100%;
     }
 }
-
 .contact ul.details {
     list-style: none;
     margin: 32px 0;
