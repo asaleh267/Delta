@@ -27,10 +27,6 @@ h1, h2, h3, h4, h5, h6, p, ul {
     text-align: center;
     text-decoration: none;
 }
-.pb-4 {
-    padding-bottom: 32px !important;
-}
-
 /* header */
 .header {
     background: #ffffff;
@@ -157,7 +153,12 @@ main {
         width: 100%;
     }
 }
-
+.pricing .items-wrapper .item.professional .item-inner .heading {
+    padding: 38px;
+}
+.pricing .items-wrapper .item.professional .item-inner .content .submit-button {
+   margin-bottom: 36px;
+}
 .pricing .items-wrapper .item .item-inner {
     background-color: #ffffff;
     position: relative;
